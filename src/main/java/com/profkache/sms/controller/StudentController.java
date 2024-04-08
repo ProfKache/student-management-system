@@ -3,6 +3,7 @@ package com.profkache.sms.controller;
 import com.profkache.sms.service.StudentService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class StudentController {
@@ -12,6 +13,7 @@ public class StudentController {
         this.studentService = studentService;
     }
 
+    @GetMapping("/students")
     public String list_students(Model model) {
         model.addAttribute("students", studentService.getAllStudents());
 
