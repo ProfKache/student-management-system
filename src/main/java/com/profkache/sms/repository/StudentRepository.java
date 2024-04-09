@@ -1,6 +1,6 @@
-package com.profkache.sms.repository;
+package com.profkache.sms.student.repository;
 
-import com.profkache.sms.entity.Student;
+import com.profkache.sms.student.entity.Student;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface StudentRepository extends JpaRepository<Student, Long> {
