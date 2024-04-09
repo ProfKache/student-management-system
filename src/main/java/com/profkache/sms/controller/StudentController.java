@@ -10,11 +10,12 @@ public class StudentController {
     private final StudentService studentService;
 
     public StudentController(StudentService studentService) {
+        super();
         this.studentService = studentService;
     }
 
     @GetMapping("/students")
-    public String list_students(Model model) {
+    public String listStudents(Model model) {
         model.addAttribute("students", studentService.getAllStudents());
 
         // Return a view
