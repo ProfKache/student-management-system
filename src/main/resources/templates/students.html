@@ -8,13 +8,23 @@
 <body>
     <nav class="navbar bg-body-tertiary bg-dark" data-bs-theme="dark">
         <div class="container-fluid">
-            <span class="navbar-brand mb-0 h1">Student Management System</span>
+            <span class="navbar-brand mb-0 h1">
+                <a th:href="@{/students}">Student Management System</a>
+            </span>
         </div>
     </nav>
     <section class="container">
         <div class="row">
             <h1>All Students</h1>
         </div>
+        <div class="row">
+            <div class="col-md-3 mb-3">
+                <a class="btn btn-primary btn-sm" th:href="@{/students/new}">
+                    Add New Student
+                </a>
+            </div>
+        </div>
+
         <table class="table table-striped table-bordered">
             <thead class="table-dark">
                 <tr>
