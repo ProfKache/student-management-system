@@ -42,8 +42,17 @@
                     <td th:text="${student.lastName}"></td>
                     <td th:text="${student.email}"></td>
                     <td>
-                        <button type="button" class="btn btn-outline-info btn-sm">Edit</button>
-                        <button type="button" class="btn btn-outline-danger btn-sm">Delete</button>
+<!--                        <a th:href="@{/students/edit/{id} (id = ${student.id})}"-->
+                        <a th:href="@{'/students/edit/' + ${student.id}}"
+                           type="button"
+                           class="btn btn-outline-info btn-sm">
+                            Edit
+                        </a>
+                        <a th:href="@{'/students/' + ${student.id}}"
+                           type="button"
+                           class="btn btn-outline-danger btn-sm">
+                            Delete
+                        </a>
                     </td>
                 </tr>
             </tbody>
